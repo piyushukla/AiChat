@@ -1,0 +1,724 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.hero_section {
+  background-image: url(https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.bg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-main {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 80px;
+}
+
+/* CSS for Carousel */
+
+.product_list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.product_circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #dcdcdc;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.product_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product_circle img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60px;
+}
+
+.product_type {
+  text-align: center;
+}
+
+/* Feature container */
+
+.feature_container {
+  background-color: #f5f7f9;
+  padding-top: 80px;
+  margin-top: 80px;
+}
+
+.feature_prd_title {
+  font-size: 25px;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.underLine_style {
+  width: 200px;
+  height: 5px;
+  background: #0084d6;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.product_list_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.product_name {
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  line-height: 1.3em;
+  font-size: 1em;
+  color: black;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 2.5em;
+}
+
+li {
+  position: relative;
+  /* Make it a reference point for absolute positioning */
+  margin-bottom: 2.5em;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Highlight the entire card on hover */
+li:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Position the SVG icon in the top-right */
+
+/* Make the icon visible and highlight it on hover */
+li:hover {
+  opacity: 1;
+  /* Show on hover */
+  /* Change background */
+  transform: scale(1);
+  /* Slight zoom effect */
+}
+
+.category_text {
+  color: #a9a9a9;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.product_service {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.service_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0px;
+  gap: 10px;
+}
+
+.service_container p {
+  text-align: center;
+}
+
+.service_container img {
+  width: 50px;
+  height: 50px;
+}
+
+.service_title {
+  font-size: 1.125rem;
+  line-height: 1.2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.service_description {
+  font-size: 15px;
+  color: black;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+
+.heroSection_title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  max-width: 500px;
+  line-height: 1.2;
+}
+
+.heroSection_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroSection_title2 {
+  color: white;
+  font-size: 1.5rem;
+  /* Slightly smaller */
+  font-weight: 500;
+  /* Medium weight */
+  margin-top: 10px;
+  /* Add spacing */
+}
+
+@media (max-width: 768px) {
+  .product_list_container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* 2 items per row */
+  }
+
+  .product_service {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .service_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0px;
+    gap: 10px;
+  }
+}
+
+/* Small screens (mobile) - 1 item per row */
+@media (max-width: 480px) {
+  .product_list_container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    /* 1 item per row */
+    .product_service {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}
+
+/* Button styling */
+
+.button_container {
+  display: flex;
+  gap: 15px;
+  /* Space between buttons */
+  margin-top: 20px;
+  /* Add spacing from other elements */
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Primary Button (White Background) */
+.btn.primary {
+  background-color: white;
+  color: black;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn.primary:hover {
+  background-color: #f8f8f8;
+  /* Light hover effect */
+}
+
+/* Secondary Button (Outlined) */
+.btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: black;
+}
+
+/* offer Card */
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 70px 0px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  /* Fixed width */
+  height: 450px;
+  /* Fixed height */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* AI chat */
+
+/* Floating AI Button */
+.ai-fab {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007bff;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 123, 255, 1);
+  font-weight: bold;
+  animation: pulse 0.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0px 0px 35px rgba(0, 123, 255, 1);
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.6);
+  }
+}
+
+/* AI Chat Modal */
+
+.ai-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Chat Messages */
+.ai-chat {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.message.user {
+  background: #d1e7ff;
+  text-align: right;
+}
+
+.message.ai {
+  background: #f1f1f1;
+  text-align: left;
+}
+
+/* Upload Container */
+.upload-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  bottom: 0px;
+  margin: 70px;
+  margin-left: 0px;
+}
+
+.upload-container input {
+  display: block;
+}
+
+.preview-img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.loading-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.placeholder-text {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Chat Input */
+.ai-modal-content {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ai-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.send-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Modal css */
+
+.ai-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  height: 450px;
+  text-align: center;
+}
+
+/* Make the uploaded image sticky */
+.uploaded-image-container {
+  border: 2px solid #007bff;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  height: 100px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.response-images-container {
+  flex: 1;
+  overflow-y: auto;
+  height: 300px; /* Ensures scrolling happens here */
+  padding-right: 10px;
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.image-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.response-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  transition: 0.3s;
+}
+
+.response-img:hover {
+  transform: scale(1.1);
+}
+
+/* AI Input */
+
+.ai_input {
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* AI Response Styling */
+.ai-response {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Each AI Response Item */
+.ai-response span {
+  background: #007bff;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.chat_container {
+  max-height: 260px;
+  overflow: scroll;
+}
+
+/* IMAGE SECTION */
+.image-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  margin-top: 10px;
+  height: 300px;
+  overflow-y: hidden; /* Prevent scrolling on entire section */
+  position: relative;
+}
+.user_input {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+
+  margin: 20px 0px;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .user_input {
+    width: 300px;
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    margin-top: 10px;
+    height: 300px;
+    overflow-y: hidden; /* Prevent scrolling on entire section */
+    position: relative;
+  }
+}
+
+.input_wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px; /* Space between input and search button */
+}
+
+/* Wrapper for input and mic button */
+.input_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+/* Input Field */
+.ai_input {
+  flex: 1;
+  padding: 10px 40px 10px 10px; /* Space for mic */
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
+/* Mic button inside input field */
+.mic-btn {
+  position: absolute;
+  right: 65px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+}
+
+.mic-btn:hover {
+  color: gray;
+}
+
+/* Search button */
+.search-btn {
+  background: none;
+  border: 1px solid black;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+  color: black;
+}
+
+.search-btn:hover {
+  border: 1px solid #0056b3;
+  color: white;
+}
+
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-upload-label {
+  color: black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.file-upload-label:hover {
+  color: #0056b3;
+}
+
+.file-upload-label input {
+  display: none;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #555;
+}
